@@ -5,12 +5,18 @@
  */
 package igl;
 
+
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
+
+import javafx.scene.control.Button;
+
+
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.TextField;
 
 /**
  *
@@ -18,13 +24,54 @@ import javafx.scene.control.Label;
  */
 public class FXMLDocumentController implements Initializable {
     
+   @FXML
+    private RadioButton Remplacer;
+
     @FXML
-    private Label label;
+    private RadioButton Supp;
+
+    @FXML
+    private TextField Ph;
+
+    @FXML
+    private RadioButton Text;
+
+    @FXML
+    private RadioButton Occ;
+
+    @FXML
+    private TextField info;
+
+    @FXML
+    private TextField info2;
+
+    @FXML
+    private Button Aficher;
     
     @FXML
-    private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
+    void RemAcrion(ActionEvent event) {
+
+    }
+
+    @FXML
+    void TextAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void SuppAction(ActionEvent event) {
+ 
+    }
+
+    @FXML
+    void OccAction(ActionEvent event) {
+
+    }
+
+  
+    @FXML
+    void AffAction(ActionEvent event) {
+           
     }
     
     @Override
