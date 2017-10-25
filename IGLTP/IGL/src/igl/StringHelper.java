@@ -1,6 +1,6 @@
 public class StringHelper {
     //this is for spliting the string 
-	   List<String> splitString(String parg,char separ)
+	  public List<String> splitString(String parg,char separ)
           {
               List<String> lst = new ArrayList<String>();
               try
