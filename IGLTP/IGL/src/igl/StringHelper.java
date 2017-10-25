@@ -3,17 +3,17 @@ public class StringHelper {
         String s1,s2=new String("");
         char c;
         for(int i=0;i<s.length();i++){
-           if(s.indexOf(c1)!=-1){
+           if(index(s,c1) !=-1){
              
-               if(s.indexOf(c1)==0){
+               if(index(s,c1) ==0){
                // s1=s.substring(1);
                  s1=SubString(1, s.length(), s);
-                    if(s1.indexOf(c1)!=-1){
+                    if(index(s1,c1)!=-1){
                 
                // s2+=c2+s1.substring(0, s1.indexOf(c1));
-                  s2+=c2+SubString(0, s1.indexOf(c1), s1);
+                  s2+=c2+SubString(0,index(s1,c1) , s1);
                // s1=s1.substring(s1.indexOf(c1));
-                  s1=SubString(s1.indexOf(c1), s1.length(), s1);
+                  s1=SubString(index(s1,c1), s1.length(), s1);
                 s=s1;
                     }else {
                         s2+=c2+s1;
@@ -22,9 +22,9 @@ public class StringHelper {
             }else {
                    s1=s;
                 //   s2+=s1.substring(0, s1.indexOf(c1))+c2;
-                     s2+=SubString(0, s1.indexOf(c1), s1)+c2;
+                     s2+=SubString(0,index(s1,c1), s1)+c2;
                 //   s=s1.substring(s1.indexOf(c1)+1);
-                     s=SubString(s1.indexOf(c1)+1, s1.length(), s1);
+                     s=SubString(index(s1,c1) +1, s1.length(), s1);
                    
                }
            }
@@ -42,12 +42,11 @@ public class StringHelper {
         String s2=new String();
         ArrayList<String> tab = new ArrayList<>();
         s=s.toLowerCase();
-         boolean trove = ((s.indexOf(','))!=-1);
+         boolean trove = ((index(s,',') )!=-1);
        while(trove){
-           tab.add(s.substring(0, s.indexOf(',')+1));
-           s=s.substring(s.indexOf(',')+1);
-           trove = ((s.indexOf(','))!=-1);
-           
+           tab.add(s.substring(0, index(s,',')+1));
+           s=s.substring( index(s,',')+1);
+           trove = ((index(s,','))!=-1);       
     }
         if(s.length()!=-1) tab.add(s);
         for (int i = 0; i < tab.size(); i++) {
