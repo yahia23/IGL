@@ -1,6 +1,6 @@
 public class StringHelper {
     //this is for occurance methode
-	static List<Integer> RepeatNumber(String parag,String word)
+	public List<Integer> RepeatNumber(String parag,String word)
           {
               int i = 0  ;
               String ss = " " + parag + " ";
