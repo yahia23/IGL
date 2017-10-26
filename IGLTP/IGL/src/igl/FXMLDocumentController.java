@@ -131,6 +131,7 @@ public class FXMLDocumentController implements Initializable {
     String s = new String();
     @FXML
     void AffAction(ActionEvent event) {
+	//dfkjdkjf
             if(Remplacer.isSelected()){
                s= t.Remplacer(Ph.getText(), info.getText().charAt(0), info2.getText().charAt(0));
                 Alert a = new Alert(Alert.AlertType.INFORMATION, s, ButtonType.OK);
