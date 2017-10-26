@@ -17,7 +17,8 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
-
+import java.util.ArrayList; 
+import java.util.List;
 /**
  *
  * @author yahia

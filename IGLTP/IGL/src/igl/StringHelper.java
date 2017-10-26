@@ -85,7 +85,7 @@ public class StringHelper {
      return -1;
  }
 
-}
+
     //this is for spliting the string 
 	  public List<String> splitString(String parg,char separ)
           {
@@ -124,7 +124,7 @@ public class StringHelper {
               }
               return lst;       
       }
-}
+
     //this is for occurance methode
 	public List<Integer> RepeatNumber(String parag,String word)
           {
@@ -155,7 +155,7 @@ public class StringHelper {
               }
               return indexes;
           }
-}
+
     //this is to for emptyMethode
 	public String  SuppEmpty(String parag, List<String> ss)
           {
