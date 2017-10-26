@@ -53,6 +53,9 @@ public class FXMLDocumentController implements Initializable {
     
     @FXML
     private RadioButton Frac;
+ 
+    @FXML
+    private RadioButton Split;
      
     @FXML
     void FactAction(ActionEvent event) {
@@ -123,6 +126,18 @@ public class FXMLDocumentController implements Initializable {
            Frac.setSelected(false);
            Join.setSelected(false);
     }
+ 
+     @FXML
+    void SplitAction(ActionEvent event) {
+           Supp.setSelected(false);
+           Text.setSelected(false);
+           Remplacer.setSelected(false);
+           info.setDisable(false);
+           info2.setDisable(true);
+           Frac.setSelected(false);
+           Join.setSelected(false);
+           Occ.setSelected(false);
+    }
 
     Test t = new Test();
     String s = new String();
@@ -139,15 +154,32 @@ public class FXMLDocumentController implements Initializable {
                 a.show();
             }
             if(Join.isSelected()){
-                
+                String s = t.Join(Ph.getText(), info.getText().charAt(0));
+                Alert a = new Alert(Alert.AlertType.INFORMATION, s, ButtonType.YES);
+                a.show(); 
             }
             if(Supp.isSelected()){
-                
+             List< String> tab= new ArrayList<String>();
+             tab.add("et");
+             tab.add("ou");
+             tab.add("a");
+             tab.add("non");
+             String s = t.SuppEmpty(Ph.getText(), tab);
+             Alert a = new Alert(Alert.AlertType.INFORMATION, s, ButtonType.OK);
+             a.show();
             }
             if(Frac.isSelected()){
+                String s =t.Fractionner(Ph.getText(), info.getText().charAt(0));
+                Alert a = new Alert(Alert.AlertType.INFORMATION, s, ButtonType.CLOSE);
+                a.show();
                 
             }
             if(Occ.isSelected()){
+                List<Integer> tab =   t.RepeatNumber(Ph.getText(), info.getText());
+                Alert a = new Alert(Alert.AlertType.INFORMATION, "l occurance de " + info.getText()+" est "+tab.size(), ButtonType.OK);
+                a.show();   
+            }
+            if(Split.isSelected()){ //Method non relier
                 
             }
            
