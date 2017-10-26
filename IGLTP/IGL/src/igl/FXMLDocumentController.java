@@ -55,8 +55,6 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private RadioButton Frac;
  
-    @FXML
-    private RadioButton Split;
      
     @FXML
     void FactAction(ActionEvent event) {
@@ -78,6 +76,7 @@ public class FXMLDocumentController implements Initializable {
            Remplacer.setSelected(false);
            Frac.setSelected(false);
            info.setDisable(false);
+           info2.setDisable(true);
     }
     
     @FXML
@@ -127,18 +126,6 @@ public class FXMLDocumentController implements Initializable {
            Frac.setSelected(false);
            Join.setSelected(false);
     }
- 
-     @FXML
-    void SplitAction(ActionEvent event) {
-           Supp.setSelected(false);
-           Text.setSelected(false);
-           Remplacer.setSelected(false);
-           info.setDisable(false);
-           info2.setDisable(true);
-           Frac.setSelected(false);
-           Join.setSelected(false);
-           Occ.setSelected(false);
-    }
 
     StringHelper t = new StringHelper();
     String s = new String();
@@ -180,9 +167,7 @@ public class FXMLDocumentController implements Initializable {
                 Alert a = new Alert(Alert.AlertType.INFORMATION, "l occurance de " + info.getText()+" est "+tab.size(), ButtonType.OK);
                 a.show();   
             }
-            if(Split.isSelected()){ //Method non relier
-                
-            }
+
            
     }
     @Override
