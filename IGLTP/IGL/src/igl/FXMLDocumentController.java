@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tpigl;
+package igl;
 
 import com.sun.media.sound.AlawCodec;
 import java.net.URL;
@@ -139,7 +139,7 @@ public class FXMLDocumentController implements Initializable {
            Occ.setSelected(false);
     }
 
-    Test t = new Test();
+    StringHelper t = new StringHelper();
     String s = new String();
     @FXML
     void AffAction(ActionEvent event) {

@@ -1,3 +1,10 @@
+package igl;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.ResourceBundle;
+
+
 public class StringHelper {
  public String Remplacer(String s, char c1 , char c2){
         String s1,s2=new String("");
